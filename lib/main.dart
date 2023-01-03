@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'color_schemes.g.dart';
+import 'drag_and_drap.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,6 +57,15 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const DragAndDropPage()),
+                  );
+                },
+                child: Text("To Drag and Drop Page"))
           ],
         ),
       ),
